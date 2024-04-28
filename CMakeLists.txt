@@ -23,4 +23,13 @@ if (CGMA_BUILD_EXAMPLES)
 cgma_add_example("Vector" "Vector" "vector.c")
 endif ()
 
-add_library(CGMA STATIC ${SOURCES})
+add_library(CGMA STATIC )
+
+target_sources(CGMA PRIVATE ${SOURCES})
+
+target_include_directories(${PROJECT_NAME}
+        PRIVATE
+        ./src
+        PUBLIC
+        ./include
+)
