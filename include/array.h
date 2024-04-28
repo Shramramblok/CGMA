@@ -12,12 +12,12 @@ typedef struct _CGMAArray {
     size_t data_size;
 } CGMAArray;
 
-Status CGMAArrayInit(CGMAArray *arr, size_t data_size, size_t size);
+CGMAStatus CGMAArrayInit(CGMAArray *arr, size_t data_size, size_t size);
 
-Status CGMAArrayClean(CGMAArray *arr);
+CGMAStatus CGMAArrayClean(CGMAArray *arr);
 
-Status CGMAArrayGetVal(const CGMAArray *arr, size_t idx, void *dest);
+CGMAStatus CGMAArrayGetVal(const CGMAArray *arr, size_t idx, void *dest);
 
-Status CGMAArraySetVal(CGMAArray *arr, size_t idx, const void *src);
+CGMAStatus CGMAArraySetVal(CGMAArray *arr, size_t idx, const void *src);
 
 #endif //CGMA_ARRAY_H

@@ -13,14 +13,14 @@ typedef struct _CGMAVector {
     size_t data_size;
 } CGMAVector;
 
-Status CGMAVectorInit(CGMAVector *vec, size_t data_size);
+CGMAStatus CGMAVectorInit(CGMAVector *vec, size_t data_size);
 
-Status CGMAVectorClean(CGMAVector *vec);
+CGMAStatus CGMAVectorClean(CGMAVector *vec);
 
-Status CGMAVectorGetVal(const CGMAVector *vec, size_t idx, void *dest);
+CGMAStatus CGMAVectorGetVal(const CGMAVector *vec, size_t idx, void *dest);
 
-Status CGMAVectorSetVal(CGMAVector *vec, size_t idx, const void *src);
+CGMAStatus CGMAVectorSetVal(CGMAVector *vec, size_t idx, const void *src);
 
-Status CGMAVectorAppend(CGMAVector *vec, const void *data);
+CGMAStatus CGMAVectorAppend(CGMAVector *vec, const void *data);
 
 #endif //CGMA_VECTOR_H
